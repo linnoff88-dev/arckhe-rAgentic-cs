@@ -124,7 +124,7 @@
         <a class="btn ghost" href="https://github.com/inematds/rAgentic-cs" target="_blank" rel="noopener">Ver no GitHub</a>
       </div>
     </div>
-    <figure><img src="assets/hero.png" alt="Ilustração abstrata representando controle remoto de agentes de código via Telegram e GitHub"></figure>
+    <figure><img src="assets/hero.png" alt="Ilustraçêo abstrata representando controle remoto de agentes de código via Telegram e GitHub"></figure>
   </div>
 </header>
 
@@ -155,14 +155,14 @@
 <section id="pre"><div class="wrap">
   <span class="chip">Pré-requisitos</span>
   <h2>O que precisa estar pronto antes</h2>
-  <p class="sub">Sistema + pelo menos uma conta de IA + pelo menos uma plataforma de interação.</p>
+  <p class="sub">Sistema + pelo menos uma conta de IA + pelo menos uma plataforma de interaçêo.</p>
   <div class="grid g3">
-    <div class="card"><h3>Docker & Docker Compose</h3><p>Pra rodar o servidor (app + Postgres, se optar pelo banco local).</p><pre><span class="c"># checar instalação</span>
+    <div class="card"><h3>Docker & Docker Compose</h3><p>Pra rodar o servidor (app + Postgres, se optar pelo banco local).</p><pre><span class="c"># checar instalaçêo</span>
 docker --version
 docker compose version</pre></div>
-    <div class="card"><h3>Node.js 20+</h3><p>Só necessário se for rodar localmente sem Docker (<code>npm run dev</code>).</p><pre><span class="c"># checar versão</span>
+    <div class="card"><h3>Node.js 20+</h3><p>Só necessário se for rodar localmente sem Docker (<code>npm run dev</code>).</p><pre><span class="c"># checar versêo</span>
 node --version</pre></div>
-    <div class="card"><h3>Contas necessárias</h3><p>GitHub (clonar repos), Claude Pro/Max <b>ou</b> conta Codex, e Telegram <b>ou</b> GitHub pra interação.</p><pre><span class="c"># gerar token GitHub em</span>
+    <div class="card"><h3>Contas necessárias</h3><p>GitHub (clonar repos), Claude Pro/Max <b>ou</b> conta Codex, e Telegram <b>ou</b> GitHub pra interaçêo.</p><pre><span class="c"># gerar token GitHub em</span>
 <span class="s">https://github.com/settings/tokens</span> <span class="c"># scope: repo</span></pre></div>
   </div>
 </div></section>
@@ -181,7 +181,7 @@ node --version</pre></div>
   </div></div>
 
   <div class="step"><div class="b">2</div><div>
-    <h3>Configuração core (obrigatória)</h3>
+    <h3>Configuraçêo core (obrigatória)</h3>
     <p>Defina <code>DATABASE_URL</code> e o token de GitHub para clonar repositórios.</p>
 <pre><span class="c"># .env</span>
 DATABASE_URL=postgresql://postgres:postgres@postgres:5432/remote_coding_agent
@@ -208,12 +208,12 @@ TELEGRAM_STREAMING_MODE=stream  <span class="c"># stream (default) | batch</span
   </div></div>
 
   <div class="step"><div class="b">5</div><div>
-    <h3>Suba a aplicação</h3>
+    <h3>Suba a aplicaçêo</h3>
     <p>Escolha o profile do Docker Compose de acordo com o banco (local ou remoto).</p>
-<pre><span class="c"># Opção A: Postgres remoto (Supabase, Neon...)</span>
+<pre><span class="c"># Opçêo A: Postgres remoto (Supabase, Neon...)</span>
 <span class="k">docker compose --profile external-db up -d --build</span>
 
-<span class="c"># Opção B: Postgres local via Docker</span>
+<span class="c"># Opçêo B: Postgres local via Docker</span>
 <span class="k">docker compose --profile with-db up -d --build</span></pre>
   </div></div>
 
@@ -228,7 +228,7 @@ TELEGRAM_STREAMING_MODE=stream  <span class="c"># stream (default) | batch</span
     <h3>Converse e invoque comandos</h3>
     <p>Pergunte livremente ou invoque um comando carregado, com argumentos.</p>
 <pre><span class="k">/command-invoke plan</span> "Add retry logic to API calls"
-<span class="k">/status</span>  <span class="c"># mostra plataforma, assistente, codebase e sessão ativa</span></pre>
+<span class="k">/status</span>  <span class="c"># mostra plataforma, assistente, codebase e sessêo ativa</span></pre>
   </div></div>
 
   <div class="step"><div class="b">8</div><div>
@@ -243,10 +243,10 @@ TELEGRAM_STREAMING_MODE=stream  <span class="c"># stream (default) | batch</span
 <section id="exemplos"><div class="wrap">
   <span class="chip">Exemplos</span>
   <h2>Fluxo real de uso</h2>
-  <p class="sub">Dois caminhos de interação cobertos pelo projeto: chat no Telegram e menções em issues/PRs do GitHub.</p>
+  <p class="sub">Dois caminhos de interaçêo cobertos pelo projeto: chat no Telegram e menções em issues/PRs do GitHub.</p>
   <div class="grid g2">
-    <div class="card"><h3>💬 Telegram</h3><p>Clone um repo, carregue <code>.claude/commands/</code>, e invoque <code>/command-invoke prime</code> pra pesquisar o codebase ou <code>/command-invoke plan "Add dark mode"</code> pra gerar um plano de implementação — tudo na conversa.</p></div>
-    <div class="card"><h3>🐙 GitHub</h3><p>Mencione <code>@remote-agent</code> numa issue: <code>@remote-agent can you analyze this bug?</code>. Na primeira menção o bot clona o repositório e injeta o contexto completo da issue/PR; nas seguintes, resume a conversa mantendo o histórico.</p></div>
+    <div class="card"><h3>💬 Telegram</h3><p>Clone um repo, carregue <code>.claude/commands/</code>, e invoque <code>/command-invoke prime</code> pra pesquisar o codebase ou <code>/command-invoke plan "Add dark mode"</code> pra gerar um plano de implementaçêo — tudo na conversa.</p></div>
+    <div class="card"><h3>🐙 GitHub</h3><p>Mencione <code>@remote-agent</code> numa issue: <code>@remote-agent can you analyze this bug?</code>. Na primeira mençêo o bot clona o repositório e injeta o contexto completo da issue/PR; nas seguintes, resume a conversa mantendo o histórico.</p></div>
   </div>
 </div></section>
 
@@ -255,7 +255,7 @@ TELEGRAM_STREAMING_MODE=stream  <span class="c"># stream (default) | batch</span
   <h2>Arquitetura e próximos passos</h2>
   <p class="sub">O projeto já está funcional (adapters, orquestrador, comandos genéricos, Docker); o roadmap descrito no README é sobre expandir plataformas e assistentes suportados.</p>
   <div class="phase"><div class="tag">Hoje</div><div class="d"><strong>Adapters + orquestrador</strong><span>Telegram e GitHub Webhooks funcionando, roteamento de mensagens, gerenciador de concorrência (lock manager) e 3 tabelas Postgres (<code>remote_agent_codebases</code>, <code>_conversations</code>, <code>_sessions</code>).</span></div></div>
-  <div class="phase"><div class="tag">Hoje</div><div class="d"><strong>Assistentes plugáveis</strong><span>Claude Code e Codex via <code>IAssistantClient</code>, com detecção automática do assistente pela pasta de comandos do codebase clonado.</span></div></div>
+  <div class="phase"><div class="tag">Hoje</div><div class="d"><strong>Assistentes plugáveis</strong><span>Claude Code e Codex via <code>IAssistantClient</code>, com detecçêo automática do assistente pela pasta de comandos do codebase clonado.</span></div></div>
   <div class="phase"><div class="tag">Extensível</div><div class="d"><strong>Mais plataformas</strong><span>Arquitetura de adapter (<code>IPlatformAdapter</code>) preparada para novas plataformas além de Telegram e GitHub, conforme o README descreve ("e mais no futuro").</span></div></div>
 </div></section>
 

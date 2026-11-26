@@ -1,4 +1,4 @@
-﻿# Dynamous Remote Coding Agent
+# Dynamous Remote Coding Agent
 
 Control AI coding assistants (Claude Code, Codex) remotely from Telegram, GitHub, and more. Built for developers who want to code from anywhere with persistent sessions and flexible workflows/systems.
 
@@ -910,4 +910,4 @@ netstat -ano | findstr :3000
 
 ---
 
-Projeto adaptado da comunidade INEMA TDS - Marca Arckhe
+Projeto  - ARCKHÉe
